@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Var-let-const</title>
+  </head>
+    <body>
+    <div class="container">
+      <h1>Var vs Let vs Const</h1>
+      <p class="subtitle">Understanding the differences between variable declarations in JavaScript</p>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>var</th>
+              <th>let</th>
+              <th>const</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scope</td>
+              <td><span class="badge badge-partial">Function Scope</span></td>
+              <td><span class="badge badge-yes">Block Scope</span></td>
+              <td><span class="badge badge-yes">Block Scope</span></td>
+            </tr>
+            <tr>
+              <td>Hoisting</td>
+              <td><span class="badge badge-yes">Yes (undefined)</span></td>
+              <td><span class="badge badge-partial">Yes (TDZ)</span></td>
+              <td><span class="badge badge-partial">Yes (TDZ)</span></td>
+            </tr>
+            <tr>
+              <td>Re-declaration</td>
+              <td><span class="badge badge-yes">Allowed</span></td>
+              <td><span class="badge badge-no">Not Allowed</span></td>
+              <td><span class="badge badge-no">Not Allowed</span></td>
+            </tr>
+            <tr>
+              <td>Re-assignment</td>
+              <td><span class="badge badge-yes">Allowed</span></td>
+              <td><span class="badge badge-yes">Allowed</span></td>
+              <td><span class="badge badge-no">Not Allowed</span></td>
+            </tr>
+            <tr>
+              <td>Initialization Required</td>
+              <td><span class="badge badge-no">No</span></td>
+              <td><span class="badge badge-no">No</span></td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Temporal Dead Zone</td>
+              <td><span class="badge badge-no">No</span></td>
+              <td><span class="badge badge-yes">Yes</span></td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Global Object Property</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+              <td><span class="badge badge-no">No</span></td>
+              <td><span class="badge badge-no">No</span></td>
+            </tr>
+            <tr>
+              <td>Best Use Case</td>
+              <td>Legacy code / Avoid</td>
+              <td>Variables that change</td>
+              <td>Constants / Immutable values</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- Mobile Card Layout -->
+        <div class="mobile-cards">
+          <div class="mobile-card">
+            <div class="mobile-card-header">Scope</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-partial">Function Scope</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Block Scope</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Block Scope</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Hoisting</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Yes (undefined)</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-partial">Yes (TDZ)</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-partial">Yes (TDZ)</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Re-declaration</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Allowed</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-no">Not Allowed</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-no">Not Allowed</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Re-assignment</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Allowed</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Allowed</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-no">Not Allowed</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Initialization Required</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-no">No</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-no">No</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Yes</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Temporal Dead Zone</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-no">No</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Yes</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Yes</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Global Object Property</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value"><span class="badge badge-yes">Yes</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value"><span class="badge badge-no">No</span></span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value"><span class="badge badge-no">No</span></span>
+            </div>
+          </div>
+          
+          <div class="mobile-card">
+            <div class="mobile-card-header">Best Use Case</div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">var</span>
+              <span class="mobile-card-value">Legacy code / Avoid</span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">let</span>
+              <span class="mobile-card-value">Variables that change</span>
+            </div>
+            <div class="mobile-card-row">
+              <span class="mobile-card-label">const</span>
+              <span class="mobile-card-value">Constants / Immutable values</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="code-example">
+        <h3>📝 Quick Examples</h3>
+        <pre><code>// VAR - Function scoped, can be re-declared
+var x = 1;
+var x = 2; // ✅ Allowed
+if (true) {
+  var x = 3; // Same variable
+}
+console.log(x); // 3
+
+// LET - Block scoped, cannot be re-declared
+let y = 1;
+// let y = 2; // ❌ Error: Identifier 'y' has already been declared
+if (true) {
+  let y = 3; // Different variable
+}
+console.log(y); // 1
+
+// CONST - Block scoped, cannot be re-assigned
+const z = 1;
+// z = 2; // ❌ Error: Assignment to constant variable
+const obj = { name: "John" };
+obj.name = "Jane"; // ✅ Allowed (object properties can change)
+// obj = {}; // ❌ Error: Cannot reassign const</code></pre>
+      </div>
+    </div>
+    
+  </body>
+</html>

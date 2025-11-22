@@ -1,0 +1,281 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #a0a0a0;
+      margin-bottom: 40px;
+      font-size: 1.1em;
+    }
+    
+    .table-container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    
+    thead {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    th {
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    th:first-child {
+      text-align: left;
+      border-radius: 10px 0 0 0;
+    }
+    
+    th:last-child {
+      border-radius: 0 10px 0 0;
+    }
+    
+    td {
+      padding: 18px 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: #4facfe;
+    }
+    
+    tbody tr {
+      transition: all 0.3s ease;
+    }
+    
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: scale(1.01);
+    }
+    
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .badge-yes {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: white;
+    }
+    
+    .badge-no {
+      background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+      color: white;
+    }
+    
+    .badge-partial {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+    }
+    
+    .code-example {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 30px;
+      border-left: 4px solid #4facfe;
+    }
+    
+    .code-example h3 {
+      margin-bottom: 15px;
+      color: #4facfe;
+    }
+    
+    .code-example pre {
+      background: #1a1a2e;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+    
+    .code-example code {
+      color: #00f2fe;
+    }
+    
+    /* Mobile Responsive Styles */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      
+      h1 {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+      }
+      
+      .subtitle {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+      }
+      
+      .table-container {
+        padding: 15px;
+        border-radius: 10px;
+      }
+      
+      /* Hide regular table on mobile */
+      table {
+        display: none;
+      }
+      
+      /* Mobile card layout */
+      .mobile-cards {
+        display: block;
+      }
+      
+      .mobile-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .mobile-card-header {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #4facfe;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(79, 172, 254, 0.3);
+      }
+      
+      .mobile-card-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .mobile-card-row:last-child {
+        border-bottom: none;
+      }
+      
+      .mobile-card-label {
+        font-weight: 600;
+        font-size: 0.9em;
+        color: #a0a0a0;
+        flex: 1;
+      }
+      
+      .mobile-card-value {
+        flex: 1;
+        text-align: right;
+        font-size: 0.85em;
+      }
+      
+      .code-example {
+        padding: 12px;
+        margin-top: 20px;
+      }
+      
+      .code-example h3 {
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+      
+      .code-example pre {
+        padding: 12px;
+        font-size: 0.8em;
+      }
+      
+      .badge {
+        padding: 5px 10px;
+        font-size: 0.75em;
+      }
+    }
+    
+    @media screen and (min-width: 769px) {
+      .mobile-cards {
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      .subtitle {
+        font-size: 0.85em;
+      }
+      
+      .mobile-card {
+        padding: 15px;
+      }
+      
+      .mobile-card-header {
+        font-size: 1em;
+      }
+      
+      .mobile-card-label {
+        font-size: 0.85em;
+      }
+      
+      .mobile-card-value {
+        font-size: 0.8em;
+      }
+      
+      .badge {
+        padding: 4px 8px;
+        font-size: 0.7em;
+      }
+    }
+  

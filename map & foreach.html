@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map & Foreach</title>
+    <style>
+      * {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Map & Foreach</h1>
+    <p>Map and Foreach are the two methods to iterate over an array.</p>
+    <script>
+
+      const arr = [1, 2, 3, 4, 5];
+
+      const added = arr.map((number) => number + 2);
+      //   console.log(added);
+
+      const newArr = arr.forEach((item, index) => {
+        arr[index] = item + 2;
+      });
+      console.log(newArr);
+
+
+      const sum = arr.map((number) => number + 2).filter((arr)=> arr>3);
+    </script>
+  </body>
+</html>
