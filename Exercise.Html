@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+    <style>
+      * {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise</h1>
+    <script>
+      let students = [
+        { name: "kaif", Marks: 20, city: "Gorakhpur" },
+        { name: "Atif", Marks: 21, city: "delhi" },
+        { name: "Nadeem", Marks: 22, city: "gurgaon" },
+        { name: "kashif", Marks: 20, city: "Basti" },
+        { name: "dev", Marks: 28, city: "kasimpur" },
+        { name: "harsh", Marks: 25, city: "Patna" },
+        { name: "lakshya", Marks: 23, city: "ghazibad" },
+        { name: "rohit", Marks: 27, city: "jharkhand" },
+      ];
+
+      // Q1- Return only name of student in Capital letter 
+      console.log(students?.map((item)=>item.name.toLocaleUpperCase()))
+
+      // Q2- Return details of only those  who scored more then 25 marks
+      console.log(students?.filter((item)=>item.Marks>25))
+      
+      // Q3- Return only name of student who scored more then 26
+      console.log(students?.filter((item)=>item.Marks>26)?.map((item)=>item.name?.toLocaleUpperCase()))
+      
+      // Q4- Sum of Marks of all students
+      console.log(students?.map((item)=>item.Marks).reduce((acc,item)=>acc+item))
+      
+      // Q5- Return total marks of students with marks> 22 after 5 marks
+      //                 have been added to those who scored less then 22
+      console.log(students?.map((item)=>item.Marks<=22 ? item.Marks+5:item.Marks).reduce((acc,item)=>acc+item))
+
+
+
+
+
+    </script>
+  </body>
+</html>
